@@ -1,0 +1,72 @@
+[gd_scene format=3 uid="uid://l70mcflw1had"]
+
+[ext_resource type="Texture2D" uid="uid://ci3dj54bi0fwj" path="res://Assets/pixil-frame-0 (3).png" id="1_tjn2e"]
+[ext_resource type="Texture2D" uid="uid://cothrj33n2dqj" path="res://Assets/pixil-frame-0 (4).png" id="1_w0p2i"]
+
+[node name="MainScreen" type="Control" unique_id=1647069658]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 8.0
+offset_bottom = -13.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=932274454]
+position = Vector2(572.00006, 319.50003)
+scale = Vector2(2.8950002, 1.6025002)
+texture = ExtResource("1_w0p2i")
+
+[node name="Start" type="Button" parent="." unique_id=2070311229]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.18
+anchor_top = 0.50100005
+anchor_right = 0.266
+anchor_bottom = 0.619
+offset_left = 0.19999695
+offset_top = -0.13504028
+offset_right = -0.55999756
+offset_bottom = -0.06500244
+text = "Start"
+
+[node name="Quit" type="Button" parent="." unique_id=1250790714]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.67700005
+anchor_top = 0.513
+anchor_right = 0.771
+anchor_bottom = 0.62700003
+offset_left = -0.32006836
+offset_top = 0.24499512
+offset_right = -0.3600464
+offset_bottom = -0.14501953
+text = "Quit"
+
+[node name="Extras" type="Button" parent="." unique_id=1899008477]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.416
+anchor_top = 0.712
+anchor_right = 0.535
+anchor_bottom = 0.791
+offset_left = 0.44000244
+offset_top = -0.11999512
+offset_right = 0.39996338
+offset_bottom = -0.28500366
+text = "Extras"
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1328685211]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.124000005
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = 0.2599945
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_tjn2e")
+expand_mode = 2

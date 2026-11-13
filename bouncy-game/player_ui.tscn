@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://d3f3xnxl4grdx"]
+
+[ext_resource type="Texture2D" uid="uid://ju22uoqma3k1" path="res://icon.svg" id="1_lwipk"]
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=838164623]
+
+[node name="Control" type="Control" parent="." unique_id=1471376675]
+layout_mode = 3
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 4.0
+offset_bottom = 4.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control" unique_id=598199622]
+clip_contents = true
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.54800004
+anchor_bottom = 0.19600001
+offset_right = 8.511963
+offset_bottom = 0.20799255
+
+[node name="TextureRect" type="TextureRect" parent="Control/HBoxContainer" unique_id=1106757044]
+layout_mode = 2
+texture = ExtResource("1_lwipk")
+
+[node name="ProgressBar" type="ProgressBar" parent="Control/HBoxContainer" unique_id=2008383830]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
