@@ -1,9 +1,14 @@
 [gd_scene format=3 uid="uid://l70mcflw1had"]
 
+[ext_resource type="Script" uid="uid://cagyw07qqtpkp" path="res://main_screen.gd" id="1_7a4el"]
 [ext_resource type="Texture2D" uid="uid://ci3dj54bi0fwj" path="res://Assets/pixil-frame-0 (3).png" id="1_tjn2e"]
 [ext_resource type="Texture2D" uid="uid://cothrj33n2dqj" path="res://Assets/pixil-frame-0 (4).png" id="1_w0p2i"]
 
+[sub_resource type="VideoStreamTheora" id="VideoStreamTheora_w0p2i"]
+file = "res://Assets/StartVideoCONVERT.ogg"
+
 [node name="MainScreen" type="Control" unique_id=1647069658]
+z_index = -3
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -14,50 +19,12 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+script = ExtResource("1_7a4el")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=932274454]
 position = Vector2(572.00006, 319.50003)
 scale = Vector2(2.8950002, 1.6025002)
 texture = ExtResource("1_w0p2i")
-
-[node name="Start" type="Button" parent="." unique_id=2070311229]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.18
-anchor_top = 0.50100005
-anchor_right = 0.266
-anchor_bottom = 0.619
-offset_left = 0.19999695
-offset_top = -0.13504028
-offset_right = -0.55999756
-offset_bottom = -0.06500244
-text = "Start"
-
-[node name="Quit" type="Button" parent="." unique_id=1250790714]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.67700005
-anchor_top = 0.513
-anchor_right = 0.771
-anchor_bottom = 0.62700003
-offset_left = -0.32006836
-offset_top = 0.24499512
-offset_right = -0.3600464
-offset_bottom = -0.14501953
-text = "Quit"
-
-[node name="Extras" type="Button" parent="." unique_id=1899008477]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.416
-anchor_top = 0.712
-anchor_right = 0.535
-anchor_bottom = 0.791
-offset_left = 0.44000244
-offset_top = -0.11999512
-offset_right = 0.39996338
-offset_bottom = -0.28500366
-text = "Extras"
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1328685211]
 layout_mode = 1
@@ -70,3 +37,34 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_tjn2e")
 expand_mode = 2
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=255090719]
+z_index = 2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = SubResource("VideoStreamTheora_w0p2i")
+volume_db = 8.04
+speed_scale = 0.938
+expand = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1456727811]
+
+[node name="Button" type="Button" parent="." unique_id=490959587]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.356
+anchor_top = 0.42700002
+anchor_right = 0.578
+anchor_bottom = 0.657
+offset_left = 0.039978027
+offset_top = -0.14501953
+offset_right = -0.47998047
+offset_bottom = -0.19500732
+text = "start"
+
+[connection signal="finished" from="VideoStreamPlayer" to="." method="_on_video_stream_player_finished"]
+[connection signal="button_up" from="Button" to="." method="_on_button_button_up"]
