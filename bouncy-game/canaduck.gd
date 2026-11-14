@@ -59,7 +59,7 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
-
+#NOTE TO SELF: justs working on ahstetichs, why ya got this tab open :]?
 
 func _on_bounce_timer_timeout() -> void:
 	bounce = true
