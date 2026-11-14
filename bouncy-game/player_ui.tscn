@@ -1,11 +1,14 @@
 [gd_scene format=3 uid="uid://d3f3xnxl4grdx"]
 
+[ext_resource type="Script" uid="uid://dnplr2tkoupuf" path="res://player_ui.gd" id="1_5m0x8"]
 [ext_resource type="Texture2D" uid="uid://ju22uoqma3k1" path="res://icon.svg" id="1_lwipk"]
 
 [node name="CanvasLayer" type="CanvasLayer" unique_id=838164623]
+script = ExtResource("1_5m0x8")
 
 [node name="Control" type="Control" parent="." unique_id=1471376675]
 layout_mode = 3
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_right = 4.0
@@ -28,3 +31,6 @@ texture = ExtResource("1_lwipk")
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
+min_value = 400.0
+max_value = 1900.0
+value = 400.0
