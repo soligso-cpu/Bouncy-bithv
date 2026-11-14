@@ -5453,18 +5453,6 @@ position = Vector2(-9728, -16336)
 scale = Vector2(136.9375, 100.46)
 texture = ExtResource("1_7dev5")
 
-[node name="Sprite2D22" type="Sprite2D" parent="Sprite2D8" unique_id=1930154859]
-position = Vector2(328.82886, 645.13245)
-rotation = 0.20943952
-scale = Vector2(75.6875, 72.28125)
-texture = ExtResource("2_wntnt")
-
-[node name="Sprite2D16" type="Sprite2D" parent="Sprite2D8/Sprite2D22" unique_id=961240002]
-position = Vector2(36.949017, 111.1255)
-rotation = 0.6894051
-scale = Vector2(33.5625, 55.617195)
-texture = ExtResource("11_icy7u")
-
 [node name="Sprite2D35" type="Sprite2D" parent="Sprite2D8" unique_id=1234724666]
 position = Vector2(1781.5208, 1838.9137)
 scale = Vector2(10.97191, 11.436356)
