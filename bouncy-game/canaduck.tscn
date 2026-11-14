@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://5c5yihvd4t5c"]
+
+[ext_resource type="Script" uid="uid://gwm1gdrxpehr" path="res://canaduck.gd" id="1_ccmel"]
+[ext_resource type="Texture2D" uid="uid://ju22uoqma3k1" path="res://icon.svg" id="2_y6lp2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p6004"]
+size = Vector2(118, 118)
+
+[node name="canaduck" type="CharacterBody2D" unique_id=2008538143]
+script = ExtResource("1_ccmel")
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=1415771779]
+position = Vector2(5, 0)
+texture = ExtResource("2_y6lp2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=41584732]
+position = Vector2(5, 1)
+shape = SubResource("RectangleShape2D_p6004")
+
+[node name="BounceTimer" type="Timer" parent="." unique_id=554157910]
+wait_time = 0.233
+one_shot = true
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1487847866]
+position = Vector2(0, -2)
+zoom = Vector2(0.2, 0.2)
+
+[connection signal="timeout" from="BounceTimer" to="." method="_on_bounce_timer_timeout"]

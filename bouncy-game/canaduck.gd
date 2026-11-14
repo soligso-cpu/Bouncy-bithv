@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 
-const SPEED = 500.0
+const SPEED = 1500
 var jump_velocity = -400.0
 var jump_strength = -20
 var charging_jump = false
@@ -20,7 +20,7 @@ func _physics_process(delta: float) -> void:
 		velocity += get_gravity() * delta
 	if is_on_floor() and bounce == true:
 		print(jump_velocity)
-		velocity.y = Globals.jump_velocity - 200
+		velocity.y = Globals.jump_velocity + 200
 		Globals.jump_velocity = Globals.jump_velocity/2
 		print(Globals.jump_velocity)
 		
@@ -46,7 +46,9 @@ func _physics_process(delta: float) -> void:
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction := Input.get_axis("Strafe Left", "Strafe Right")
-	
+	rotation = global_position.direction_to(get_global_mouse_position()).angle()
+	#rotation = global_position.direction_to(get_global_mouse_position()).angle()
+	#direction = global_position.direction_to(get_global_mouse_position())
 	if direction:
 		velocity.x = direction * SPEED
 	else:
