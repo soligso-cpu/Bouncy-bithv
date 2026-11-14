@@ -8,7 +8,7 @@ var charging_jump = false
 var overboard = false
 var bounce = true 
 var dev_mode = false
-
+		   
 func _physics_process(delta: float) -> void:
 	if Globals.charging_jump == true and Globals.overboard == false:
 		Globals.jump_velocity += Globals.jump_strength
@@ -21,6 +21,7 @@ func _physics_process(delta: float) -> void:
 	if not is_on_floor() and dev_mode == false:
 		velocity += get_gravity() * delta * 2
 	if is_on_floor() and bounce == true:
+		_bounce()
 		print(jump_velocity)
 		velocity.y = Globals.jump_velocity + 200
 		Globals.jump_velocity = Globals.jump_velocity/2
@@ -63,5 +64,7 @@ func _physics_process(delta: float) -> void:
 func _on_bounce_timer_timeout() -> void:
 	bounce = true
 	
-
+func _bounce():
+	pass
+		
 	
