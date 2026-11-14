@@ -37,7 +37,6 @@ func _physics_process(delta: float) -> void:
 	# Handle jump.
 	if Input.is_action_just_pressed("Jump") and is_on_floor():
 		Globals.charging_jump = true
-		$AnimationPlayer.play("Squish")
 	if Input.is_action_just_released("Jump") and Globals.charging_jump == true:
 		Globals.charging_jump = false
 		bounce = true
