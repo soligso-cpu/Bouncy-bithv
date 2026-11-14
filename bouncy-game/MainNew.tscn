@@ -1,11 +1,15 @@
 [gd_scene format=4 uid="uid://b7gr4k83l53tm"]
 
 [ext_resource type="Texture2D" uid="uid://bpke5dwe52255" path="res://Assets/pixil-frame-0 (7).png" id="1_3sas3"]
+[ext_resource type="Texture2D" uid="uid://c0nnqwwig7mwx" path="res://Assets/pixil-frame-0 (10).png" id="1_5lkh1"]
+[ext_resource type="Texture2D" uid="uid://cmhygx5f400w7" path="res://Assets/pixil-frame-0 (11).png" id="1_7dev5"]
 [ext_resource type="Texture2D" uid="uid://cothrj33n2dqj" path="res://Assets/pixil-frame-0 (4).png" id="1_j844c"]
+[ext_resource type="Texture2D" uid="uid://d0g61cysodwmv" path="res://Assets/pixil-frame-0 (9).png" id="2_7dev5"]
 [ext_resource type="Texture2D" uid="uid://bqavej5x0fdj2" path="res://Assets/right.png" id="2_8vq8o"]
 [ext_resource type="PackedScene" uid="uid://5c5yihvd4t5c" path="res://canaduck.tscn" id="2_s2u72"]
 [ext_resource type="PackedScene" uid="uid://d3f3xnxl4grdx" path="res://player_ui.tscn" id="3_s2u72"]
 [ext_resource type="Texture2D" uid="uid://o0us5bb4qhhx" path="res://Assets/pixil-frame-0 (8).png" id="6_gor3p"]
+[ext_resource type="Texture2D" uid="uid://bnacwnpghcyip" path="res://Assets/light.webp" id="7_g7kfp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8vq8o"]
 texture = ExtResource("1_j844c")
@@ -5431,11 +5435,41 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_8vq8o")
 sources/1 = SubResource("TileSetAtlasSource_3sas3")
 
-[node name="Node2D" type="Node2D" unique_id=1073778831]
+[node name="bASE" type="Node2D" unique_id=1073778831]
 metadata/_edit_horizontal_guides_ = [-32327.0]
 
+[node name="Sprite2D8" type="Sprite2D" parent="." unique_id=1979914248]
+position = Vector2(-6089, -12104)
+scale = Vector2(116.82, 80.925)
+texture = ExtResource("1_7dev5")
+
+[node name="Sprite2D7" type="Sprite2D" parent="." unique_id=189978895]
+position = Vector2(4997.0005, -2140)
+scale = Vector2(18.0675, 21.310001)
+texture = ExtResource("2_7dev5")
+
+[node name="Sprite2D5" type="Sprite2D" parent="." unique_id=757532659]
+position = Vector2(-1176, -2705)
+scale = Vector2(19.060001, 22.827497)
+texture = ExtResource("1_5lkh1")
+
+[node name="Sprite2D4" type="Sprite2D" parent="." unique_id=1901852691]
+position = Vector2(-22964.002, -11261)
+scale = Vector2(32.145863, 57.146446)
+texture = ExtResource("2_7dev5")
+
+[node name="Sprite2D6" type="Sprite2D" parent="." unique_id=1297718320]
+position = Vector2(-16745, -5038.999)
+scale = Vector2(27.625, 35.4575)
+texture = ExtResource("1_3sas3")
+
+[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=185802678]
+position = Vector2(-8186, -4638)
+scale = Vector2(31.189377, 34.310627)
+texture = ExtResource("2_7dev5")
+
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1353402730]
-position = Vector2(13174, -8058)
+position = Vector2(13367.001, -5263)
 scale = Vector2(31.615, 42.085)
 texture = ExtResource("1_3sas3")
 
@@ -5445,9 +5479,115 @@ tile_set = SubResource("TileSet_3sas3")
 
 [node name="canaduck" parent="." unique_id=2008538143 instance=ExtResource("2_s2u72")]
 
+[node name="PointLight2D" type="PointLight2D" parent="canaduck" unique_id=96053644]
+position = Vector2(15, -3)
+scale = Vector2(5.719731, 4.423077)
+color = Color(1, 1, 0.49803922, 1)
+texture = ExtResource("7_g7kfp")
+
 [node name="CanvasLayer" parent="." unique_id=838164623 instance=ExtResource("3_s2u72")]
 
 [node name="Sprite2D2" type="Sprite2D" parent="." unique_id=940802944]
-position = Vector2(-16245.001, -582)
-scale = Vector2(7.8325, 7.2575)
+position = Vector2(9205.001, -2811)
+scale = Vector2(15.388755, 14.66375)
 texture = ExtResource("6_gor3p")
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="." unique_id=2073200956]
+color = Color(1.7681202, 1.7681202, 1.7681202, 0.24705882)
+blend_mode = 1
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=372614521]
+position = Vector2(9022, -2610)
+scale = Vector2(27.823994, 27.77564)
+color = Color(1, 1, 0.49803922, 1)
+texture = ExtResource("7_g7kfp")
+
+[node name="PointLight2D2" type="PointLight2D" parent="." unique_id=1463696029]
+position = Vector2(12558, -2041)
+scale = Vector2(27.823994, 27.77564)
+color = Color(1, 1, 0.49803922, 1)
+texture = ExtResource("7_g7kfp")
+
+[node name="PointLight2D3" type="PointLight2D" parent="." unique_id=169000076]
+position = Vector2(10432, -6839)
+scale = Vector2(27.823994, 27.77564)
+color = Color(1, 1, 0.49803922, 1)
+texture = ExtResource("7_g7kfp")
+
+[node name="PointLight2D4" type="PointLight2D" parent="." unique_id=316443098]
+position = Vector2(12807, -6369)
+scale = Vector2(27.823994, 27.77564)
+color = Color(1, 1, 0.49803922, 1)
+texture = ExtResource("7_g7kfp")
+
+[node name="PointLight2D5" type="PointLight2D" parent="." unique_id=473738886]
+position = Vector2(10641, -10366)
+scale = Vector2(27.823994, 27.77564)
+color = Color(1, 1, 0.49803922, 1)
+texture = ExtResource("7_g7kfp")
+
+[node name="PointLight2D6" type="PointLight2D" parent="." unique_id=978066368]
+position = Vector2(13271, -9669)
+scale = Vector2(27.823994, 27.77564)
+color = Color(1, 1, 0.49803922, 1)
+texture = ExtResource("7_g7kfp")
+
+[node name="PointLight2D7" type="PointLight2D" parent="." unique_id=469063087]
+position = Vector2(-1017, -8963)
+scale = Vector2(27.823994, 27.77564)
+color = Color(1, 1, 0.49803922, 1)
+texture = ExtResource("7_g7kfp")
+
+[node name="PointLight2D8" type="PointLight2D" parent="." unique_id=257168124]
+position = Vector2(480, -749.99976)
+scale = Vector2(7.306616, 7.0972223)
+color = Color(1, 1, 0.49803922, 1)
+texture = ExtResource("7_g7kfp")
+
+[node name="PointLight2D9" type="PointLight2D" parent="." unique_id=1494563268]
+position = Vector2(3311.0002, -7548.0005)
+scale = Vector2(10.849216, 10.896367)
+color = Color(1, 1, 0.49803922, 1)
+texture = ExtResource("7_g7kfp")
+
+[node name="PointLight2D10" type="PointLight2D" parent="." unique_id=855288395]
+position = Vector2(-392, -14558)
+scale = Vector2(27.823994, 27.77564)
+color = Color(1, 1, 0.49803922, 1)
+texture = ExtResource("7_g7kfp")
+
+[node name="PointLight2D11" type="PointLight2D" parent="." unique_id=183853182]
+position = Vector2(-13295, -4058)
+scale = Vector2(27.823994, 27.77564)
+color = Color(1, 1, 0.49803922, 1)
+texture = ExtResource("7_g7kfp")
+
+[node name="PointLight2D12" type="PointLight2D" parent="." unique_id=119361868]
+position = Vector2(-8950, -10773)
+scale = Vector2(27.823994, 27.77564)
+color = Color(1, 1, 0.49803922, 1)
+texture = ExtResource("7_g7kfp")
+
+[node name="PointLight2D13" type="PointLight2D" parent="." unique_id=1030305927]
+position = Vector2(4152, -11499)
+scale = Vector2(11.423208, 11.528845)
+color = Color(1, 1, 0.49803922, 1)
+texture = ExtResource("7_g7kfp")
+
+[node name="PointLight2D14" type="PointLight2D" parent="." unique_id=1689865758]
+position = Vector2(5890, -1506)
+scale = Vector2(9.799887, 8.122863)
+color = Color(1, 1, 0.49803922, 1)
+texture = ExtResource("7_g7kfp")
+
+[node name="PointLight2D15" type="PointLight2D" parent="." unique_id=916915220]
+position = Vector2(7900, -5145)
+scale = Vector2(27.823994, 27.77564)
+color = Color(1, 1, 0.49803922, 1)
+texture = ExtResource("7_g7kfp")
+
+[node name="PointLight2D16" type="PointLight2D" parent="." unique_id=1303313591]
+position = Vector2(-22729, -12552)
+scale = Vector2(27.823994, 27.77564)
+color = Color(1, 1, 0.49803922, 1)
+texture = ExtResource("7_g7kfp")
