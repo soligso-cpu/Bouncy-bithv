@@ -13,6 +13,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 offset_right = 4.0
 offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Control" unique_id=598199622]
 clip_contents = true
@@ -32,5 +34,5 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
 min_value = 400.0
-max_value = 1900.0
+max_value = 2900.0
 value = 400.0
