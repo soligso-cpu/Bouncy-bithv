@@ -10,3 +10,8 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	$Control/HBoxContainer/ProgressBar.value = -Globals.jump_velocity
 	
+	if Globals.play == true:
+		print("ran")
+		$Control/VideoStreamPlayer.play()
+		Globals.play = false
+	

@@ -3,6 +3,9 @@
 [ext_resource type="Script" uid="uid://dnplr2tkoupuf" path="res://player_ui.gd" id="1_5m0x8"]
 [ext_resource type="Texture2D" uid="uid://ju22uoqma3k1" path="res://icon.svg" id="1_lwipk"]
 
+[sub_resource type="VideoStreamTheora" id="VideoStreamTheora_5m0x8"]
+file = "res://Assets/endgameVidoCONVERT.ogg"
+
 [node name="CanvasLayer" type="CanvasLayer" unique_id=838164623]
 script = ExtResource("1_5m0x8")
 
@@ -36,3 +39,15 @@ size_flags_vertical = 1
 min_value = 400.0
 max_value = 2900.0
 value = 400.0
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Control" unique_id=306445540]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+stream = SubResource("VideoStreamTheora_5m0x8")
+expand = true
