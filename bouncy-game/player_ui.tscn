@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://d3f3xnxl4grdx"]
 
 [ext_resource type="Script" uid="uid://dnplr2tkoupuf" path="res://player_ui.gd" id="1_5m0x8"]
-[ext_resource type="Texture2D" uid="uid://ju22uoqma3k1" path="res://icon.svg" id="1_lwipk"]
+[ext_resource type="Texture2D" uid="uid://bi50701t2e6nk" path="res://Assets/duckjumpicon.png" id="2_5m0x8"]
 
 [sub_resource type="VideoStreamTheora" id="VideoStreamTheora_5m0x8"]
 file = "res://Assets/endgameVidoCONVERT.ogg"
@@ -25,12 +25,16 @@ layout_mode = 1
 anchors_preset = -1
 anchor_right = 0.54800004
 anchor_bottom = 0.19600001
-offset_right = 8.511963
-offset_bottom = 0.20799255
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 9.511963
+offset_bottom = 1.2079926
 
 [node name="TextureRect" type="TextureRect" parent="Control/HBoxContainer" unique_id=1106757044]
 layout_mode = 2
-texture = ExtResource("1_lwipk")
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.25
+texture = ExtResource("2_5m0x8")
 
 [node name="ProgressBar" type="ProgressBar" parent="Control/HBoxContainer" unique_id=2008383830]
 layout_mode = 2
