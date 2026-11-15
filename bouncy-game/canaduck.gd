@@ -27,6 +27,7 @@ func _physics_process(delta: float) -> void:
 		Globals.jump_velocity = Globals.jump_velocity/2
 		print(Globals.jump_velocity)
 		$AnimationPlayer.play("Squish")
+		$AudioStreamPlayer2D.play()
 		if Globals.jump_velocity >= -10:
 			bounce = false
 			Globals.jump_velocity = -400
