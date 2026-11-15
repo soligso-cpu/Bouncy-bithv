@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dd8mgtp53sy0n"
+path="res://.godot/imported/Vibes. useless vibes but vibes nonetheless.mp3-776db573358b2d65385ed75d5d2d9131.mp3str"
+
+[deps]
+
+source_file="res://Assets/spritesheet/Vibes. useless vibes but vibes nonetheless.mp3"
+dest_files=["res://.godot/imported/Vibes. useless vibes but vibes nonetheless.mp3-776db573358b2d65385ed75d5d2d9131.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
